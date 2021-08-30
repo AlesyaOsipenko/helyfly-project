@@ -2,6 +2,8 @@
 @import "./abstracts/mixins";
 @import "./abstracts/normalize.scss";
 @import "./header";
+@import "./main-block.scss";
+@import "./info";
 
 *,
 *::after,
@@ -14,4 +16,5 @@
 html,
 body {
     font-family: 'Montserrat', sans-serif;
+    min-width: 320px;
 }
