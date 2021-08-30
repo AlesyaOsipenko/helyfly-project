@@ -1,0 +1,89 @@
+.header {
+    background-color: $primaryColor;
+    border: 1px solid;
+
+    .container {
+        width: 100%;
+        padding: 0 15px;
+        border: 1px solid red;
+        @media screen and (min-width: 576px) {
+            padding: 0 35px;
+        }
+        @media screen and (min-width: 768px) {
+            padding: 0 50px;
+        }
+        @media screen and (min-width: 1280px) {
+            padding: 0 70px;
+        }
+        @media screen and (min-width: 1440px) {
+            padding: 0 150px;
+        }
+        @media screen and (min-width: 1920px) {
+            padding: 0 390px;
+        }
+    }
+
+    &__inner {
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media screen and (min-width: 768px) {
+            height: 100px;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        margin-right: 45px;
+        @media screen and (min-width: 576px) {
+            margin-right: 36px;
+        }
+
+        @media screen and (min-width:768px) {
+            width: 130px;
+        }
+    }
+
+    &__phone-city {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: $linkColor;
+        @media screen and (min-width: 576px) {
+            display: none;
+        }
+    }
+
+    &__phone {
+        display: none;
+        @media screen and (min-width: 576px) {
+            display: block;
+        }
+
+        span {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            color: $textColorLight;
+        }
+
+        &__phone-link {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            color: $textColor;
+        }
+    }
+
+    &__user {
+        @media screen and (min-width: 1280px) {
+            display: none;
+        }
+    }
+}

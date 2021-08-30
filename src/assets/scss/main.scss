@@ -1,0 +1,17 @@
+@import "./abstracts/vars";
+@import "./abstracts/mixins";
+@import "./abstracts/normalize.scss";
+@import "./header";
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Montserrat', sans-serif;
+}

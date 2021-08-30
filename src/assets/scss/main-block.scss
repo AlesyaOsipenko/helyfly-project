@@ -1,0 +1,59 @@
+.main {
+    background-color: silver;
+    color: $primaryColor;
+    .container {
+        @extend %container;
+    }
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 655px;
+    }
+    &__title{
+        @include text(32px, 700, 39px, $primaryColor); 
+        max-width: 247px;
+        margin-top: -6px;
+        span {
+            color: $accentColor;
+        }
+    }
+    &__price-box {
+        height: 93px;
+        width: 208px;
+        background-image: url(./../images/price-box.svg);
+        background-repeat: no-repeat;
+        margin: 36px 0 14px;
+        display: flex;
+        justify-content: space-around;
+        padding: 6px 15px;
+        margin-left: -5px;
+    }
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    &__priceLabel{
+        @include text(18px, 400, inherit,inherit);   
+    }
+    &__price {
+        @include text(30px, 800, inherit, inherit);
+    }
+    &__percent {
+        border-radius: 50%;
+        filter: drop-shadow(0px 4px 15px rgba(255, 255, 255, 0.25)) drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.25));
+        max-height: 47px;
+        margin-top: 10px;
+        transform: translateX(4px);
+    }
+    &__btn {
+        width: 275px;
+        height: 68px;
+        border: 3px solid $primaryColor;
+        border-radius: 7px;
+        background-color: transparent;
+        @include text(16px, 900, 20px, white); 
+        filter: drop-shadow(0px 4px 70px rgba(255, 255, 255, 0.7)) drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.25));
+        transform: translateY(-6px);
+    }
+}
