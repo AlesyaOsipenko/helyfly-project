@@ -92,5 +92,36 @@
         .info__item:last-child {
             margin-bottom: 50px;
         }
+
+        .info__rating {
+            position: relative;
+            padding: 15px 0 15px 45px;
+            border-bottom: 0.5px solid #C7C7C7;
+            border-top: 0.5px solid #C7C7C7;
+            @include flex (center, $flex-direction: column);
+
+            .info__review {
+                position: relative;
+                &::before {
+                    content:"";
+                    @include background ();
+                    background-image: url(../images/info/rate.svg);
+                    width: 37px;
+                    height: 41px;
+                    position: absolute;
+                    left: -50px;
+                    top: -10px;
+                }
+            }
+
+            .info__reviews__img {
+                width: 118px;
+                height: 17px;
+            }
+        
+            .info__rating--bold {
+                @include text (14px, 600, 21px, $textColor);
+            }
+        }
     }
 }

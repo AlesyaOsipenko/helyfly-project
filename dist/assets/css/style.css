@@ -747,6 +747,23 @@ template {
     margin-bottom: 50px;
 }
 
+.info__wrapper .info__rating {
+    position: relative;
+}
+
+.info__wrapper .info__rating::before {
+    content: "";
+    background-image: url(../images/info/rate.svg);
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left: -40px;
+    top: 2px;
+    width: 37px;
+    height: 41px;
+}
+
 *,
 *::after,
 *::before {
