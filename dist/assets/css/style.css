@@ -666,6 +666,12 @@ template {
     margin: 30px 0 30px;
 }
 
+@media (min-width: 576px) {
+    .info__wrapper .info__text {
+        font-size: 18px;
+    }
+}
+
 .info__wrapper .info__item {
     font-weight: 500;
     font-size: 14px;
@@ -749,19 +755,44 @@ template {
 
 .info__wrapper .info__rating {
     position: relative;
+    padding: 15px 0 15px 45px;
+    border-bottom: 0.5px solid #C7C7C7;
+    border-top: 0.5px solid #C7C7C7;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-direction: column;
+    flex-direction: column;
 }
 
-.info__wrapper .info__rating::before {
+.info__wrapper .info__rating .info__review {
+    position: relative;
+}
+
+.info__wrapper .info__rating .info__review::before {
     content: "";
-    background-image: url(../images/info/rate.svg);
     display: block;
     background-repeat: no-repeat;
     background-position: center;
-    position: absolute;
-    left: -40px;
-    top: 2px;
+    background-image: url(../images/info/rate.svg);
     width: 37px;
     height: 41px;
+    position: absolute;
+    left: -50px;
+    top: -10px;
+}
+
+.info__wrapper .info__rating .info__reviews__img {
+    width: 118px;
+    height: 17px;
+}
+
+.info__wrapper .info__rating .info__rating--bold {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    color: #37373F;
 }
 
 *,
