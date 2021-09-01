@@ -1,0 +1,96 @@
+.info {
+    .container {
+        @extend %container;
+    }
+
+    &__inner {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    &__title {
+        @include text (28px, 400, 34px, $textColor);
+        text-align: center;
+        padding: 40px 0 13px;
+    }
+
+    &__img {
+        border-radius: 4px;
+        width: 100%;
+    }
+
+    &__wrapper {
+        .info__text {
+            @include text (14px, 400, 20px, $textColor);
+            max-width: 290px;
+            margin: 30px 0 30px;
+        }
+
+
+        .info__item {
+            @include text(14px, 500, 20px, $textColor);
+            margin-bottom: 20px;
+            margin-left: 35px;
+        }
+
+        .info__item-time {
+            position: relative; 
+            &::before {
+                content:"";
+                background-image: url(../images/info/time.svg);
+                @include background ();
+                position: absolute;
+                left: -40px;
+                bottom: -5px;
+                width: 32px;
+                height: 32px;
+            }
+        }
+
+        .info__item-photo {
+            position: relative;
+                &::before{
+                    content:"";
+                    background-image: url(../images/info/photo.svg);
+                    @include background ();
+                    position: absolute;
+                    left: -40px;
+                    bottom: -3px;
+                    width: 35px;
+                    height: 28px;
+                }
+        }
+
+        .info__item-location {
+            position: relative;
+            &::before{
+                content:"";
+                background-image: url(../images/info/location.svg);
+                @include background ();
+                position: absolute;
+                left: -40px;
+                bottom: -7px;
+                width: 33px;
+                height: 33px;
+            }
+        }
+
+        .info__item-speech {
+            position: relative;
+                &::before{
+                    content:"";
+                    background-image: url(../images/info/speech-bubble.svg);
+                    @include background;
+                    position: absolute;
+                    left: -40px;
+                    top: 2px;
+                    width: 31px;
+                    height: 31px;
+                }
+        }
+
+        .info__item:last-child {
+            margin-bottom: 50px;
+        }
+    }
+}

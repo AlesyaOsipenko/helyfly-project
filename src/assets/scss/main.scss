@@ -1,9 +1,9 @@
 @import "./abstracts/vars";
 @import "./abstracts/mixins";
 @import "./abstracts/normalize.scss";
-@import "./header";
-@import "./main-block.scss";
-@import "./info";
+@import "./layout/header";
+@import "./blocks/main-block.scss";
+@import "./blocks/info";
 
 *,
 *::after,

@@ -18,3 +18,9 @@
         @content;
     }
 }
+
+@mixin background ($display: null) {
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+}
