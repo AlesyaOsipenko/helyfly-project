@@ -1,9 +1,11 @@
 @import "./abstracts/vars";
 @import "./abstracts/mixins";
 @import "./abstracts/normalize.scss";
+@import "./blocks/title";
 @import "./layout/header";
 @import "./blocks/main-block.scss";
 @import "./blocks/info";
+@import "./blocks/photocards";
 
 
 *,

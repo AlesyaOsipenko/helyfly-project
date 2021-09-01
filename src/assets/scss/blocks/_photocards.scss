@@ -1,0 +1,96 @@
+.photocards {
+    padding-top: 60px;
+    .container {
+        @extend %container;
+    }
+
+    &__title {
+        text-align: center;
+        margin: 0 auto 32px;
+        max-width: 266px;
+        @include media (sm) {
+            @include text (20px, 500, 29px, $textColor);
+            text-align: left;
+            margin-left: 0;
+            margin-bottom: 30px;
+        }
+        @include media (md) {
+            @include text (28px, 500, 29px, $textColor);
+            max-width: 315px;
+            margin-bottom: 50px;
+        }
+        @include media (lg) {
+            @include text (20px, 500, 29px, $textColor);
+            max-width: 220px;
+            margin-bottom: 35px;
+        }
+    }
+
+    &__wrapper {
+        @include flex(center, center, $flex-direction: column);
+    }
+
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: 1fr;
+        grid-gap: 15px;
+        overflow-x: auto;
+        width: 100%;
+        @include media(sm) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            max-width: 568px;
+        }
+        @include media(md) {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            max-width: 100%;
+        }
+    }
+
+    &__inner-img {
+        border-radius: 4px;
+    }
+
+    &__inner-img:first-child {
+        margin-left: 0;
+    }
+
+    &__link {
+        @include text (17px, 500, 25px,$linkColor );
+        display: none;
+        @include media (sm) {
+            display: block;
+            padding-top: 42px;
+        }
+    }
+
+    &__link{
+        position: relative;
+    }
+
+    &__link::before {
+        content: "";
+        position: absolute;
+        display: block;
+        background-image: url(../images/photocards/arrow.svg);
+        width: 11px;
+        height: 6px;
+        bottom: 9px;
+        left: -18px;
+    }
+
+    &__link::after{
+        content: "";
+        position: absolute;
+        display: block;
+        background-image: url(../images/photocards/arrow.svg);
+        width: 11px;
+        height: 6px;
+        bottom: 9px;
+        right: -18px;
+    }
+
+    
+}
