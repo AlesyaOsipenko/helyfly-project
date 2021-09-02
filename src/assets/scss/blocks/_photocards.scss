@@ -4,6 +4,10 @@
         @extend %container;
     }
 
+    &__wrapper {
+        @include flex(center, center, $flex-direction: column);
+    }
+
     &__title {
         text-align: center;
         margin: 0 auto 32px;
@@ -24,10 +28,6 @@
             max-width: 220px;
             margin-bottom: 35px;
         }
-    }
-
-    &__wrapper {
-        @include flex(center, center, $flex-direction: column);
     }
 
     &__inner {
@@ -58,7 +58,7 @@
     }
 
     &__link {
-        @include text (17px, 500, 25px,$linkColor );
+        @include text (17px, 500, 25px,$linkColor);
         display: none;
         @include media (sm) {
             display: block;
@@ -91,6 +91,4 @@
         bottom: 9px;
         right: -18px;
     }
-
-    
 }

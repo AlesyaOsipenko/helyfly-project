@@ -1,4 +1,6 @@
 .info {
+    $info: &;
+
     .container {
         @extend %container;
     }
@@ -6,79 +8,85 @@
     &__inner {
         display: grid;
         grid-template-columns: 1fr;
+
         @include media(md) {
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: 110px;
             column-gap: 37px;
         }
-    }
 
-    &__title {
-        @include text (28px, 400, 34px, $textColor);
-        text-align: center;
-        padding: 40px 0 13px;
-        @include media(sm) {
-            font-size: 40px;
-            padding: 50px 0 40px;
-            @include text (40px, 500, 34px, $textColor);
-        }
-        @include media(md) {
-            margin: 0;
-            text-align: left;
-            max-width: 460px;
-        }
-    }
 
-    &__img {
-        border-radius: 4px;
-        width: 100%;
-        @include media(md) {
-            padding-top: 70px;
-        }
-    }
+        #{$info}__title {
+            @include text (28px, 400, 34px, $textColor);
+            text-align: center;
+            padding: 40px 0 13px;
 
-    &__wrapper {
-        .info__text {
-            @include text (14px, 400, 20px, $textColor);
-            margin: 30px 0 30px;
-            @include media(xs) {
-                @include text(18px, 400, 26px, $textColor);
-                max-width: 480px;
-            }
             @include media(sm) {
-                margin: 30px 0 46px;
+                font-size: 40px;
+                padding: 50px 0 40px;
+                @include text (40px, 500, 34px, $textColor);
             }
+
             @include media(md) {
+                margin: 0;
+                text-align: left;
+                max-width: 460px;
+            }
+        }
+
+        #{$info}__img {
+            border-radius: 4px;
+            width: 100%;
+
+            @include media(md) {
+                padding-top: 70px;
+            }
+        }
+
+        #{$info}__wrapper {
+            #{$info}__text {
+                @include text (14px, 400, 20px, $textColor);
+                margin: 30px 0 30px;
+
+                @include media(xs) {
+                    @include text(18px, 400, 26px, $textColor);
+                    max-width: 480px;
+                }
+
+                @include media(sm) {
+                    margin: 30px 0 46px;
+                }
+
+                @include media(md) {
                     margin: 18px 0 23px;
                 }
             }
-        }
 
-
-        .info__item {
-            @include text(14px, 500, 20px, $textColor);
-            margin-bottom: 20px;
-            margin-left: 35px;
-        }
-
-        .info__item-time {
-            position: relative; 
-            &::before {
-                content:"";
-                background-image: url(../images/info/time.svg);
-                @include background ();
-                position: absolute;
-                left: -40px;
-                bottom: -5px;
-                width: 32px;
-                height: 32px;
+            #{$info}__item {
+                @include text(14px, 500, 20px, $textColor);
+                margin-bottom: 20px;
+                margin-left: 35px;
             }
-        }
 
-        .info__item-photo {
-            position: relative;
-                &::before{
-                    content:"";
+            #{$info}__item-time {
+                position: relative;
+
+                &::before {
+                    @include pseudo (block, absolute, "");
+                    background-image: url(../images/info/time.svg);
+                    @include background ();
+                    left: -40px;
+                    bottom: -5px;
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+
+            #{$info}__item-photo {
+                position: relative;
+
+                &::before {
+                    content: "";
                     background-image: url(../images/info/photo.svg);
                     @include background ();
                     position: absolute;
@@ -87,27 +95,29 @@
                     width: 35px;
                     height: 28px;
                 }
-        }
-
-        .info__item-location {
-            position: relative;
-            &::before{
-                content:"";
-                background-image: url(../images/info/location.svg);
-                @include background ();
-                position: absolute;
-                left: -40px;
-                bottom: -7px;
-                width: 33px;
-                height: 33px;
             }
-        }
 
-        .info__item-speech {
-            position: relative;
-            margin-bottom: 38px;
-                &::before{
-                    content:"";
+            #{$info}__item-location {
+                position: relative;
+
+                &::before {
+                    content: "";
+                    background-image: url(../images/info/location.svg);
+                    @include background ();
+                    position: absolute;
+                    left: -40px;
+                    bottom: -7px;
+                    width: 33px;
+                    height: 33px;
+                }
+            }
+
+            #{$info}__item-speech {
+                position: relative;
+                margin-bottom: 38px;
+
+                &::before {
+                    content: "";
                     background-image: url(../images/info/speech-bubble.svg);
                     @include background;
                     position: absolute;
@@ -116,41 +126,44 @@
                     width: 31px;
                     height: 31px;
                 }
-        }
-
-        .info__rating {
-            position: relative;
-            padding: 15px 0 15px 45px;
-            border-bottom: 0.5px solid #C7C7C7;
-            border-top: 0.5px solid #C7C7C7;
-            @include flex (center, $flex-direction: column);
-
-            @include media(xs) {
-                padding: 30px 0 30px 45px;
             }
 
-
-            .info__review {
+            #{$info}__rating {
                 position: relative;
-                &::before {
-                    content:"";
-                    @include background ();
-                    background-image: url(../images/info/rate.svg);
-                    width: 37px;
-                    height: 41px;
-                    position: absolute;
-                    left: -50px;
-                    top: -10px;
-                }
-            }
+                padding: 15px 0 15px 45px;
+                border-bottom: 0.5px solid #C7C7C7;
+                border-top: 0.5px solid #C7C7C7;
+                @include flex (center, $flex-direction: column);
 
-            .info__reviews__img {
-                width: 118px;
-                height: 17px;
-            }
-        
-            .info__rating--bold {
-                @include text (14px, 600, 21px, $textColor);
+                @include media(xs) {
+                    padding: 30px 0 30px 45px;
+                }
+
+
+                #{$info}__review {
+                    position: relative;
+
+                    &::before {
+                        content: "";
+                        @include background ();
+                        background-image: url(../images/info/rate.svg);
+                        width: 37px;
+                        height: 41px;
+                        position: absolute;
+                        left: -50px;
+                        top: -10px;
+                    }
+                }
+
+                #{$info}__reviews__img {
+                    width: 118px;
+                    height: 17px;
+                }
+
+                #{$info}__rating--bold {
+                    @include text (14px, 600, 21px, $textColor);
+                }
             }
         }
     }
+}

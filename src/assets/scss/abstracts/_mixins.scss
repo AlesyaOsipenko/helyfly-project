@@ -32,3 +32,9 @@
     flex-wrap: $flex-wrap;
     flex-direction: $flex-direction;
 }
+
+@mixin pseudo ($display: block, $pos: absolute, $content: '') {
+    display: $display;
+    position: $pos;
+    content: $content;
+}
