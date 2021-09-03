@@ -743,12 +743,13 @@ template {
 }
 
 .info__inner .info__wrapper .info__item-time::before {
+    display: block;
+    position: absolute;
     content: "";
     background-image: url(../images/info/time.svg);
     display: block;
     background-repeat: no-repeat;
     background-position: center;
-    position: absolute;
     left: -40px;
     bottom: -5px;
     width: 32px;
@@ -859,6 +860,17 @@ template {
     padding-top: 60px;
 }
 
+.photocards__wrapper {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
 .photocards__title {
     text-align: center;
     margin: 0 auto 32px;
@@ -897,17 +909,6 @@ template {
         max-width: 220px;
         margin-bottom: 35px;
     }
-}
-
-.photocards__wrapper {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-direction: column;
-    flex-direction: column;
 }
 
 .photocards__inner {

@@ -1,0 +1,7 @@
+.title {
+    @include text(26px, 400, 32px, $textColor);
+}
+
+.block-title {
+    @include text(26px, 500, 32px, $textColor);
+}

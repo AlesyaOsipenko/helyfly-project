@@ -21,15 +21,15 @@
         height: 140px;
     }
 
-    &__img::after{
-        content:"";
+    &__pic::after{
+        content: "";
+        background-image: url(../images/photoghraper/heart.png);
         display: block;
-        background-image: url('../../images/photoghraper/heart.png');
-        position: absolute;
         width: 31px;
         height: 27px;
-        top:0;
-        right: 0;
+        position: absolute;
+        top: -15px;
+        right: -75px;
     }
 
     &__img {
@@ -51,5 +51,55 @@
         @include text (14px, 500, 21px, $linkColor);
         max-width: 290px;
         text-align: center;
+        margin-bottom: 25px;
+        @include media (sm) {
+            margin-bottom: 30px;
+        }
     }
+
+    &__content {
+        margin-bottom: 30px;
+        @include media (xs) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 14px;
+    }
+
+    &__text-start {
+        @include text (16px, 400, 24px, $textColor);
+        margin-bottom: 20px;
+        text-align: left;
+        
+    }
+
+    &__text {
+        @include text (16px, 400, 24px, $textColor);
+        margin-bottom: 22px;
+        text-align: left;
+    }
+
+    &__content-link {
+        @include text (16px, 500, 23px, $linkColor);
+        position: relative;
+        &:after {
+        content: "";
+        position: absolute;
+        display: block;
+        background-image: url(../images/photocards/arrow.svg);
+        width: 11px;
+        height: 6px;
+        bottom: 5px;
+        right: -20px;
+        }
+    }
+
+    &__text-second {
+        @include text (16px, 400, 24px, $textColor);
+        margin-bottom: 22px;
+    }
+    
+
 }
