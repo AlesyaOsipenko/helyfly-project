@@ -1,0 +1,41 @@
+.rating {
+    position: relative;
+    @include flex (center, $flex-direction: column);
+    @include media(xs) {
+        @include flex (flex-start, center, $flex-direction: row);
+    }
+    &__reviews {
+        @include text(14px, 400, 20px, $textColor);
+        position: relative;
+        margin-bottom: 10px;
+        span {
+            @include text(14px, 500, 20px, $textColor);
+            @include media(xs) {
+                @include text(18px, 600, 26px, $textColor);
+            }
+        }
+        @include media(xs) {
+            @include text(18px, 400, 26px, $textColor);
+            margin-bottom: 0;
+            margin-right: 15px;
+        }
+    }
+    &__reviews-img {
+        width: 118px;
+        height: 17px;
+    }
+    &__reviews::before {
+        content: "";
+        background-image: url(../images/info/rate.svg);
+        @include background ();
+        position: absolute;
+        left: -45px;
+        bottom: -25px;
+        width: 37px;
+        height: 41px;
+        @include media(xs) {
+            bottom: -7px;
+        }
+    }
+}
+

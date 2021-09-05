@@ -52,7 +52,7 @@
     &__name {
         @include text (18px, 500, 22px, $textColor);
         margin-top: 23px;
-        padding-bottom: 7px;
+        padding-bottom: 2px;
     }
 
     &__prof {
@@ -62,7 +62,7 @@
 
     &__link {
         @include text (14px, 500, 21px, $linkColor);
-        max-width: 290px;
+        max-width: 229px;
         text-align: center;
         margin-bottom: 25px;
         @include media (md) {
@@ -75,7 +75,7 @@
     }
 
     &__content {
-        margin-bottom: 30px;
+        margin-bottom: 2px;
 
         @include media (xs) {
             margin-bottom: 40px;
@@ -89,6 +89,7 @@
 
     &__title {
         margin-bottom: 14px;
+        @include text (18px, 500, 21px, $textColor);
         @include media (md) {
             font-size: 18px;
         }
@@ -96,7 +97,7 @@
 
     &__text-start {
         @include text (16px, 400, 24px, $textColor);
-        margin-bottom: 20px;
+        margin-bottom: 25px;
         text-align: left;
 
     }
@@ -110,6 +111,14 @@
     &__content-link {
         @include text (16px, 500, 23px, $linkColor);
         position: relative;
+        @include media (xs) {
+            margin-bottom: 70px;
+        }
+
+        &__link {
+            padding-bottom: 70px;
+        }
+
 
         &:after {
             content: "";
@@ -126,6 +135,12 @@
     &__text-second {
         @include text (16px, 400, 24px, $textColor);
         margin-bottom: 22px;
+    }
+
+    &__title-second {
+        margin-top: 30px;
+        margin-bottom: 14px;
+        @include text (18px, 500, 21px, $textColor);
     }
 
     span {

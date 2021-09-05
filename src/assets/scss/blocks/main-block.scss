@@ -18,7 +18,8 @@
     &__title{
         @include text(32px, 700, 39px, $primaryColor); 
         max-width: 247px;
-        margin-top: -6px;
+        margin-top: -15px;
+        padding-bottom: 28px;
         span {
             color: $accentColor;
         }
@@ -39,7 +40,7 @@
         width: 208px;
         background-image: url(./../images/price-box.svg);
         background-repeat: no-repeat;
-        margin: 36px 0 14px;
+        margin: -8px 0 14px;
         display: flex;
         justify-content: space-around;
         padding: 6px 15px;

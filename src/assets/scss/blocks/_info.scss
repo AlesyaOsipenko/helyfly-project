@@ -1,4 +1,5 @@
 .info {
+    padding-top: 40px;
     $info: &;
 
     .container {
@@ -18,19 +19,19 @@
 
         #{$info}__title {
             @include text (28px, 400, 34px, $textColor);
+            max-width: 195px;
+            margin: 0 auto 15px;
             text-align: center;
-            padding: 40px 0 13px;
 
             @include media(sm) {
-                font-size: 40px;
-                padding: 50px 0 40px;
-                @include text (40px, 500, 34px, $textColor);
+                max-width: 285px;
+                margin-bottom: 40px;
+                @include text (40px, 500, 48px, $textColor);
             }
 
             @include media(md) {
                 margin: 0;
                 text-align: left;
-                max-width: 460px;
             }
         }
 
@@ -46,7 +47,8 @@
         #{$info}__wrapper {
             #{$info}__text {
                 @include text (14px, 400, 20px, $textColor);
-                margin: 30px 0 30px;
+                margin: 25px 0 40px;
+                max-width: 290px;
 
                 @include media(xs) {
                     @include text(18px, 400, 26px, $textColor);
@@ -64,12 +66,12 @@
 
             #{$info}__item {
                 @include text(14px, 500, 20px, $textColor);
-                margin-bottom: 20px;
-                margin-left: 35px;
+                margin-left: 40px;
             }
 
             #{$info}__item-time {
                 position: relative;
+                margin-bottom: 34px;
 
                 &::before {
                     @include pseudo (block, absolute, "");
@@ -84,6 +86,7 @@
 
             #{$info}__item-photo {
                 position: relative;
+                margin-bottom: 24px;
 
                 &::before {
                     content: "";
@@ -99,6 +102,7 @@
 
             #{$info}__item-location {
                 position: relative;
+                margin-bottom: 24px;
 
                 &::before {
                     content: "";
@@ -114,7 +118,7 @@
 
             #{$info}__item-speech {
                 position: relative;
-                margin-bottom: 38px;
+                margin-bottom: 43px;
 
                 &::before {
                     content: "";
@@ -129,36 +133,13 @@
             }
 
             #{$info}__rating {
-                position: relative;
                 padding: 15px 0 15px 45px;
                 border-bottom: 0.5px solid #C7C7C7;
                 border-top: 0.5px solid #C7C7C7;
-                @include flex (center, $flex-direction: column);
-
                 @include media(xs) {
                     padding: 30px 0 30px 45px;
                 }
 
-
-                #{$info}__review {
-                    position: relative;
-
-                    &::before {
-                        content: "";
-                        @include background ();
-                        background-image: url(../images/info/rate.svg);
-                        width: 37px;
-                        height: 41px;
-                        position: absolute;
-                        left: -50px;
-                        top: -10px;
-                    }
-                }
-
-                #{$info}__reviews__img {
-                    width: 118px;
-                    height: 17px;
-                }
 
                 #{$info}__rating--bold {
                     @include text (14px, 600, 21px, $textColor);

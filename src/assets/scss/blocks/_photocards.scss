@@ -1,5 +1,6 @@
 .photocards {
     padding-top: 60px;
+
     .container {
         @extend %container;
     }
@@ -12,17 +13,20 @@
         text-align: center;
         margin: 0 auto 32px;
         max-width: 266px;
+
         @include media (sm) {
             @include text (20px, 500, 29px, $textColor);
             text-align: left;
             margin-left: 0;
             margin-bottom: 30px;
         }
+
         @include media (md) {
             @include text (28px, 500, 29px, $textColor);
             max-width: 315px;
             margin-bottom: 50px;
         }
+
         @include media (lg) {
             @include text (20px, 500, 29px, $textColor);
             max-width: 220px;
@@ -37,11 +41,13 @@
         grid-gap: 15px;
         overflow-x: auto;
         width: 100%;
+
         @include media(sm) {
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(4, 1fr);
             max-width: 568px;
         }
+
         @include media(md) {
             grid-template-columns: repeat(4, 1fr);
             grid-template-rows: repeat(2, 1fr);
@@ -51,7 +57,11 @@
 
     &__inner-img {
         border-radius: 4px;
-        width: 100%;
+
+        @include media(sm) {
+            width: 100%;
+        }
+
     }
 
     &__inner-img:first-child {
@@ -59,15 +69,16 @@
     }
 
     &__link {
-        @include text (17px, 500, 25px,$linkColor);
+        @include text (17px, 500, 25px, $linkColor);
         display: none;
+
         @include media (sm) {
             display: block;
             padding-top: 42px;
         }
     }
 
-    &__link{
+    &__link {
         position: relative;
     }
 
@@ -82,7 +93,7 @@
         left: -18px;
     }
 
-    &__link::after{
+    &__link::after {
         content: "";
         position: absolute;
         display: block;
