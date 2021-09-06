@@ -1280,18 +1280,18 @@ template {
         padding: 30px 0 20px 20px;
         text-align: left;
     }
-}
 
-.timetable__wrapper .timetable__text-friday::after {
-    display: block;
-    position: absolute;
-    content: "";
-    background-image: url("../images/timetable/calendar.png");
-    background-repeat: no-repeat;
-    width: 35px;
-    height: 35px;
-    top: 0px;
-    right: 0px;
+    .timetable__wrapper .timetable__text-friday::after {
+        display: block;
+        position: absolute;
+        content: "";
+        background-image: url("../images/timetable/calendar.png");
+        background-repeat: no-repeat;
+        width: 35px;
+        height: 35px;
+        top: 22px;
+        left: 235px;
+    }
 }
 
 .timetable__wrapper .timetable__inner {
@@ -1331,9 +1331,8 @@ template {
     margin-top: 20px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 576px) {
     .timetable__wrapper .timetable__inner--second {
-        border-top: 0.5px solid #C7C7C7;
         border-bottom: none;
     }
 }

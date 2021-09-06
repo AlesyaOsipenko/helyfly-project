@@ -1,0 +1,19 @@
+.map {
+    position: relative;
+
+    &__screen{
+        margin-bottom: 52px;
+        @include media (sm) {
+            height: 510px;
+        }
+    }
+
+    &__slider{
+            @extend %container;
+            
+            .map__wrapper {
+                padding: 0 10px 0 10px;
+                border: 1px solid #C7C7C7;
+            }
+    }
+}
