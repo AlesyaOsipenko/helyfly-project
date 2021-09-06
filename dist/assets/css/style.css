@@ -1,34 +1,34 @@
-.header .container, .main .container, .info .container, .photocards .container, .photographer .container, .timetable .container {
+.header .container, .main .container, .info .container, .photographer .container, .timetable .container {
     width: 100%;
     padding: 0 15px;
 }
 
 @media screen and (min-width: 576px) {
-    .header .container, .main .container, .info .container, .photocards .container, .photographer .container, .timetable .container {
+    .header .container, .main .container, .info .container, .photographer .container, .timetable .container {
         padding: 0 35px;
     }
 }
 
 @media screen and (min-width: 768px) {
-    .header .container, .main .container, .info .container, .photocards .container, .photographer .container, .timetable .container {
+    .header .container, .main .container, .info .container, .photographer .container, .timetable .container {
         padding: 0 50px;
     }
 }
 
 @media screen and (min-width: 1280px) {
-    .header .container, .main .container, .info .container, .photocards .container, .photographer .container, .timetable .container {
+    .header .container, .main .container, .info .container, .photographer .container, .timetable .container {
         padding: 0 70px;
     }
 }
 
 @media screen and (min-width: 1440px) {
-    .header .container, .main .container, .info .container, .photocards .container, .photographer .container, .timetable .container {
+    .header .container, .main .container, .info .container, .photographer .container, .timetable .container {
         padding: 0 150px;
     }
 }
 
 @media screen and (min-width: 1920px) {
-    .header .container, .main .container, .info .container, .photocards .container, .photographer .container, .timetable .container {
+    .header .container, .main .container, .info .container, .photographer .container, .timetable .container {
         padding: 0 390px;
     }
 }
@@ -857,6 +857,10 @@ template {
     padding-top: 60px;
 }
 
+.photocards .container {
+    padding: 0px;
+}
+
 .photocards__wrapper {
     display: -ms-flexbox;
     display: flex;
@@ -881,7 +885,7 @@ template {
         line-height: 29px;
         color: #37373F;
         text-align: left;
-        margin-left: 0;
+        margin-left: 50px;
         margin-bottom: 30px;
     }
 }
@@ -905,6 +909,13 @@ template {
         color: #37373F;
         max-width: 220px;
         margin-bottom: 35px;
+        margin-left: 150px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .photocards__title {
+        margin-left: 400px;
     }
 }
 
@@ -915,13 +926,17 @@ template {
     grid-gap: 15px;
     overflow-x: auto;
     width: 100%;
+    padding-left: 15px;
 }
 
 @media (min-width: 768px) {
     .photocards__inner {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, -webkit-max-content);
+        grid-template-columns: repeat(2, max-content);
         grid-template-rows: repeat(4, 1fr);
-        max-width: 568px;
+        -ms-flex-pack: center;
+        justify-content: center;
+        padding-left: 0px;
     }
 }
 
@@ -930,6 +945,19 @@ template {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, 1fr);
         max-width: 100%;
+        padding: 0 70px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .photocards__inner {
+        padding: 0 150px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .photocards__inner {
+        padding: 0 390px;
     }
 }
 
@@ -1228,9 +1256,6 @@ template {
 
 .timetable__wrapper {
     border: 1px solid #C7C7C7;
-    display: grid;
-    grid-template-columns: 1;
-    grid-template-rows: 4fr;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -1245,18 +1270,41 @@ template {
 
 .timetable__wrapper .timetable__text-friday {
     text-align: center;
-    padding: 28px 0 16px;
+    padding: 20px 0 15px;
     border-bottom: 0.5px solid #C7C7C7;
+    position: relative;
+}
+
+@media (min-width: 576px) {
+    .timetable__wrapper .timetable__text-friday {
+        padding: 30px 0 20px 20px;
+        text-align: left;
+    }
+}
+
+.timetable__wrapper .timetable__text-friday::after {
+    display: block;
+    position: absolute;
+    content: "";
+    background-image: url("../images/timetable/calendar.png");
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 35px;
+    top: 0px;
+    right: 0px;
 }
 
 .timetable__wrapper .timetable__inner {
-    padding: 15px 19px 30px;
+    padding: 15px 20px 30px;
     border-bottom: 0.5px solid #C7C7C7;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 576px) {
     .timetable__wrapper .timetable__inner {
-        border-bottom: none;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
     }
 }
 
@@ -1267,7 +1315,7 @@ template {
 }
 
 .timetable__wrapper .timetable__sum {
-    margin: 10px 0 10px;
+    padding: 10px 0 10px;
 }
 
 .timetable__wrapper .timetable__btn {
@@ -1286,11 +1334,12 @@ template {
 @media (min-width: 768px) {
     .timetable__wrapper .timetable__inner--second {
         border-top: 0.5px solid #C7C7C7;
+        border-bottom: none;
     }
 }
 
 .timetable__wrapper .timetable__rating {
-    padding: 30px 0 30px 70px;
+    padding: 30px 0 30px 60px;
 }
 
 .rating {
