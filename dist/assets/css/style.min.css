@@ -1,20 +1,20 @@
-.header .container, .main .container, .info .container, .photocards .container, .photographer .container, .timetable .container {
+.header .container, .main .container, .info .container, .photographer .container, .timetable .container {
   width: 100%;
   padding: 0 15px; }
   @media screen and (min-width: 576px) {
-    .header .container, .main .container, .info .container, .photocards .container, .photographer .container, .timetable .container {
+    .header .container, .main .container, .info .container, .photographer .container, .timetable .container {
       padding: 0 35px; } }
   @media screen and (min-width: 768px) {
-    .header .container, .main .container, .info .container, .photocards .container, .photographer .container, .timetable .container {
+    .header .container, .main .container, .info .container, .photographer .container, .timetable .container {
       padding: 0 50px; } }
   @media screen and (min-width: 1280px) {
-    .header .container, .main .container, .info .container, .photocards .container, .photographer .container, .timetable .container {
+    .header .container, .main .container, .info .container, .photographer .container, .timetable .container {
       padding: 0 70px; } }
   @media screen and (min-width: 1440px) {
-    .header .container, .main .container, .info .container, .photocards .container, .photographer .container, .timetable .container {
+    .header .container, .main .container, .info .container, .photographer .container, .timetable .container {
       padding: 0 150px; } }
   @media screen and (min-width: 1920px) {
-    .header .container, .main .container, .info .container, .photocards .container, .photographer .container, .timetable .container {
+    .header .container, .main .container, .info .container, .photographer .container, .timetable .container {
       padding: 0 390px; } }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -657,6 +657,8 @@ template {
 
 .photocards {
   padding-top: 60px; }
+  .photocards .container {
+    padding: 0px; }
   .photocards__wrapper {
     display: flex;
     justify-content: center;
@@ -673,7 +675,7 @@ template {
         line-height: 29px;
         color: #37373F;
         text-align: left;
-        margin-left: 0;
+        margin-left: 50px;
         margin-bottom: 30px; } }
     @media (min-width: 1280px) {
       .photocards__title {
@@ -690,24 +692,37 @@ template {
         line-height: 29px;
         color: #37373F;
         max-width: 220px;
-        margin-bottom: 35px; } }
+        margin-bottom: 35px;
+        margin-left: 150px; } }
+    @media (min-width: 1920px) {
+      .photocards__title {
+        margin-left: 400px; } }
   .photocards__inner {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: 1fr;
     grid-gap: 15px;
     overflow-x: auto;
-    width: 100%; }
+    width: 100%;
+    padding-left: 15px; }
     @media (min-width: 768px) {
       .photocards__inner {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, max-content);
         grid-template-rows: repeat(4, 1fr);
-        max-width: 568px; } }
+        justify-content: center;
+        padding-left: 0px; } }
     @media (min-width: 1280px) {
       .photocards__inner {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, 1fr);
-        max-width: 100%; } }
+        max-width: 100%;
+        padding: 0 70px; } }
+    @media (min-width: 1440px) {
+      .photocards__inner {
+        padding: 0 150px; } }
+    @media (min-width: 1920px) {
+      .photocards__inner {
+        padding: 0 390px; } }
   .photocards__inner-img {
     border-radius: 4px; }
     @media (min-width: 768px) {

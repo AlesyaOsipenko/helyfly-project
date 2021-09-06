@@ -1146,6 +1146,16 @@ template {
     position: relative;
 }
 
+@media (min-width: 576px) {
+    .photographer__content-link {
+        margin-bottom: 70px;
+    }
+}
+
+.photographer__content-link__link {
+    padding-bottom: 70px;
+}
+
 .photographer__content-link:after {
     content: "";
     position: absolute;
@@ -1195,7 +1205,7 @@ template {
     text-align: center;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 576px) {
     .timetable__title {
         font-weight: 400;
         font-size: 26px;
@@ -1204,11 +1214,27 @@ template {
     }
 }
 
+@media (min-width: 768px) {
+    .timetable__title {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 29px;
+        color: #37373F;
+        margin-left: 0;
+        margin-bottom: 30px;
+        text-align: left;
+    }
+}
+
 .timetable__wrapper {
     border: 1px solid #C7C7C7;
     display: grid;
     grid-template-columns: 1;
     grid-template-rows: 4fr;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
 }
 
 @media (min-width: 1280px) {
@@ -1228,8 +1254,10 @@ template {
     border-bottom: 0.5px solid #C7C7C7;
 }
 
-.timetable__wrapper .timetable__inner .timetable__inner-first {
-    border-bottom: 0.5px solid #C7C7C7;
+@media (min-width: 768px) {
+    .timetable__wrapper .timetable__inner {
+        border-bottom: none;
+    }
 }
 
 .timetable__wrapper .timetable__text {
@@ -1253,6 +1281,12 @@ template {
     width: 130px;
     height: 50px;
     margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+    .timetable__wrapper .timetable__inner--second {
+        border-top: 0.5px solid #C7C7C7;
+    }
 }
 
 .timetable__wrapper .timetable__rating {

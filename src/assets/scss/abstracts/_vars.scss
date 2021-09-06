@@ -26,12 +26,14 @@ $linkColor: #5286EC;
     @media screen and (min-width: 1920px) {
         padding: 0 390px;
     }
+
 }
 
 $breakpoints: (
     xs:576px,
     sm:768px,
     md:1280px,
-    lg:1440px
+    lg:1440px,
+    xxl:1920px
 )
 

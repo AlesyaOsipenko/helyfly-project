@@ -2,7 +2,7 @@
     padding-top: 60px;
 
     .container {
-        @extend %container;
+        padding: 0px;
     }
 
     &__wrapper {
@@ -17,7 +17,7 @@
         @include media (sm) {
             @include text (20px, 500, 29px, $textColor);
             text-align: left;
-            margin-left: 0;
+            margin-left: 50px;
             margin-bottom: 30px;
         }
 
@@ -31,7 +31,11 @@
             @include text (20px, 500, 29px, $textColor);
             max-width: 220px;
             margin-bottom: 35px;
+            margin-left: 150px;
         }
+        @include media (xxl) {
+            margin-left: 400px;
+        }   
     }
 
     &__inner {
@@ -41,17 +45,26 @@
         grid-gap: 15px;
         overflow-x: auto;
         width: 100%;
+        padding-left: 15px;
 
         @include media(sm) {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(2, max-content);
             grid-template-rows: repeat(4, 1fr);
-            max-width: 568px;
+            justify-content: center;
+            padding-left: 0px;
         }
 
         @include media(md) {
             grid-template-columns: repeat(4, 1fr);
             grid-template-rows: repeat(2, 1fr);
             max-width: 100%;
+            padding: 0 70px;
+        }
+        @include media (lg) {
+            padding: 0 150px;
+        }
+        @include media (xxl) {
+            padding: 0 390px;
         }
     }
 
