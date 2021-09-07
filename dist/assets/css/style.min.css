@@ -995,8 +995,7 @@ template {
     font-size: 14px;
     line-height: 20px;
     color: #37373F;
-    position: relative;
-    margin-bottom: 10px; }
+    position: relative; }
     .rating__reviews span {
       font-weight: 500;
       font-size: 14px;
@@ -1015,7 +1014,7 @@ template {
         line-height: 26px;
         color: #37373F;
         margin-bottom: 0;
-        margin-right: 15px; } }
+        margin-right: 10px; } }
   .rating__reviews-img {
     width: 118px;
     height: 17px; }
@@ -1033,6 +1032,31 @@ template {
     @media (min-width: 576px) {
       .rating__reviews::before {
         bottom: -7px; } }
+  .rating-group {
+    display: inline-flex; }
+    .rating-group .rating__icon {
+      pointer-events: none;
+      font-size: 17px; }
+    .rating-group .rating__input {
+      position: absolute !important;
+      left: -9999px !important; }
+    .rating-group .rating__label {
+      cursor: pointer;
+      padding-right: 6px; }
+    .rating-group .rating__icon--star {
+      color: orange; }
+    .rating-group .rating__icon--none {
+      color: #eee; }
+    .rating-group .rating--none:checked + .rating__label .rating__icon--none {
+      color: red; }
+    .rating-group .rating__input:checked ~ .rating__label .rating__icon--star {
+      color: #ddd; }
+    .rating-group .rating-group:hover .rating__label .rating__icon--star {
+      color: orange; }
+    .rating-group .rating_input:hover ~ .rating__label .rating__icon--star {
+      color: #ddd; }
+    .rating-group .rating-group:hover .rating__input--none:not(:hover) + .rating__label .rating__icon--none {
+      color: #eee; }
 
 .map {
   position: relative; }
