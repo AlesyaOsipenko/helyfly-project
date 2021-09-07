@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="assets/css/style.min.css">
     <title>gulp project</title>
 </head>
@@ -74,7 +75,7 @@
                             <p class="rating__reviews">Более <span class="info__rating--bold">150</span> отзывов с
                                 оценкой
                             </p>
-                            
+
                             <div class="rating-group">
                                 <label aria-label="1 star" class="rating__label" for="rating-1"><i
                                         class="rating__icon rating__icon--star fa fa-star fa-xs"></i></label>
@@ -228,23 +229,23 @@
                     <p class="rating__reviews">Более <span class="info__rating--bold">150</span> отзывов с оценкой
                     </p>
 
-                        <div class="rating-group">
-                            <label aria-label="1 star" class="rating__label" for="rating-1"><i
-                                    class="rating__icon rating__icon--star fa fa-star fa-xs"></i></label>
-                            <input class="rating__input" name="rating" id="rating-1" value="1" type="radio">
-                            <label aria-label="2 stars" class="rating__label" for="rating-2"><i
-                                    class="rating__icon rating__icon--star fa fa-star"></i></label>
-                            <input class="rating__input" name="rating" id="rating-2" value="2" type="radio">
-                            <label aria-label="3 stars" class="rating__label" for="rating-3"><i
-                                    class="rating__icon rating__icon--star fa fa-star"></i></label>
-                            <input class="rating__input" name="rating" id="rating-3" value="3" type="radio" checked>
-                            <label aria-label="4 stars" class="rating__label" for="rating-4"><i
-                                    class="rating__icon rating__icon--star fa fa-star"></i></label>
-                            <input class="rating__input" name="rating" id="rating-4" value="4" type="radio">
-                            <label aria-label="5 stars" class="rating__label" for="rating-5"><i
-                                    class="rating__icon rating__icon--star fa fa-star"></i></label>
-                            <input class="rating__input" name="rating" id="rating-5" value="5" type="radio">
-                        </div>
+                    <div class="rating-group">
+                        <label aria-label="1 star" class="rating__label" for="rating-1"><i
+                                class="rating__icon rating__icon--star fa fa-star fa-xs"></i></label>
+                        <input class="rating__input" name="rating" id="rating-1" value="1" type="radio">
+                        <label aria-label="2 stars" class="rating__label" for="rating-2"><i
+                                class="rating__icon rating__icon--star fa fa-star"></i></label>
+                        <input class="rating__input" name="rating" id="rating-2" value="2" type="radio">
+                        <label aria-label="3 stars" class="rating__label" for="rating-3"><i
+                                class="rating__icon rating__icon--star fa fa-star"></i></label>
+                        <input class="rating__input" name="rating" id="rating-3" value="3" type="radio" checked>
+                        <label aria-label="4 stars" class="rating__label" for="rating-4"><i
+                                class="rating__icon rating__icon--star fa fa-star"></i></label>
+                        <input class="rating__input" name="rating" id="rating-4" value="4" type="radio">
+                        <label aria-label="5 stars" class="rating__label" for="rating-5"><i
+                                class="rating__icon rating__icon--star fa fa-star"></i></label>
+                        <input class="rating__input" name="rating" id="rating-5" value="5" type="radio">
+                    </div>
 
 
                 </div>
@@ -261,21 +262,46 @@
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.263179212758!2d37.6186063159009!3d55.75393028055366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a5a738fa419%3A0x7c347d506b52311f!2z0JrRgNCw0YHQvdCw0Y8g0J_Qu9C-0YnQsNC00Yw!5e0!3m2!1sru!2sby!4v1630958623146!5m2!1sru!2sby"
             width="100%" height="600px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 
-        <div class="map__slider">
-            <div class="map__wrapper">
-                <p>ngkdls</p>
+        <div class="map__wrapper">
+            <div class="mySwiper swiper-container">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide slider">
+                        <p class="slider__circle circle">1</p>
+                        <div class="slider__text">
+                            <p class="slider__text-one ">Где встречаемся?</p>
+                            <p class="slider__text-two">Москва</p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide slider">
+                        <p class="slider__circle circle">2</p>
+                        <div class="slider__text">
+                            <p class="slider__text-one">Время съемки</p>
+                            <p class="slider__text-two">3 часа</p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide slider">
+                        <p class="slider__circle circle">3</p>
+                        <div class="slider__text">
+                            <p class="slider__text-one">Мест осталось:</p>
+                            <p class="slider__text-two">2 места</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
             </div>
-
-
-
-
-        </div>
 
 
 
     </section>
 
     <script src="https://kit.fontawesome.com/6cd9b051f5.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 

@@ -1,19 +1,28 @@
 .map {
     position: relative;
 
-    &__screen{
+    &__screen {
         margin-bottom: 52px;
+
         @include media (sm) {
             height: 510px;
         }
     }
 
-    &__slider{
-            @extend %container;
-            
-            .map__wrapper {
-                padding: 0 10px 0 10px;
-                border: 1px solid #C7C7C7;
-            }
+    .map__wrapper {
+        border: 1px solid #C7C7C7;
+        padding: 52px 16px 14px 16px;
+        margin: 0 auto;
+        width: 275px;
+
+        @include media (md) {
+            display: none;
+        }
+
+        @include media (xs) {
+            width: 400px;
+            padding: 52px 80px 14px 80px;
+        }
+
     }
 }

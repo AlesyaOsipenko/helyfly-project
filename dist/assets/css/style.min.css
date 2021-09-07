@@ -1,20 +1,20 @@
-.header .container, .main .container, .info .container, .photographer .container, .timetable .container, .map__slider {
+.header .container, .main .container, .info .container, .photographer .container, .timetable .container {
   width: 100%;
   padding: 0 15px; }
   @media screen and (min-width: 576px) {
-    .header .container, .main .container, .info .container, .photographer .container, .timetable .container, .map__slider {
+    .header .container, .main .container, .info .container, .photographer .container, .timetable .container {
       padding: 0 35px; } }
   @media screen and (min-width: 768px) {
-    .header .container, .main .container, .info .container, .photographer .container, .timetable .container, .map__slider {
+    .header .container, .main .container, .info .container, .photographer .container, .timetable .container {
       padding: 0 50px; } }
   @media screen and (min-width: 1280px) {
-    .header .container, .main .container, .info .container, .photographer .container, .timetable .container, .map__slider {
+    .header .container, .main .container, .info .container, .photographer .container, .timetable .container {
       padding: 0 70px; } }
   @media screen and (min-width: 1440px) {
-    .header .container, .main .container, .info .container, .photographer .container, .timetable .container, .map__slider {
+    .header .container, .main .container, .info .container, .photographer .container, .timetable .container {
       padding: 0 150px; } }
   @media screen and (min-width: 1920px) {
-    .header .container, .main .container, .info .container, .photographer .container, .timetable .container, .map__slider {
+    .header .container, .main .container, .info .container, .photographer .container, .timetable .container {
       padding: 0 390px; } }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -1070,9 +1070,84 @@ template {
     @media (min-width: 768px) {
       .map__screen {
         height: 510px; } }
-  .map__slider .map__wrapper {
-    padding: 0 10px 0 10px;
-    border: 1px solid #C7C7C7; }
+  .map .map__wrapper {
+    border: 1px solid #C7C7C7;
+    padding: 52px 16px 14px 16px;
+    margin: 0 auto;
+    width: 275px; }
+    @media (min-width: 1280px) {
+      .map .map__wrapper {
+        display: none; } }
+    @media (min-width: 576px) {
+      .map .map__wrapper {
+        width: 400px;
+        padding: 52px 80px 14px 80px; } }
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .slider__box {
+    display: flex;
+    margin-bottom: 30px; }
+  .slider__circle {
+    width: 66px;
+    height: 66px;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 44px;
+    color: #fff;
+    margin-bottom: 20px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FC9B09;
+    border-radius: 50%; }
+  .slider__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px; }
+  .slider__text-one {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+    color: #37373F;
+    margin-bottom: 10px; }
+  .slider__text-two {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #37373F;
+    text-align: center; }
+
+.swiper-container {
+  max-width: 400px;
+  width: 100%;
+  min-height: 200px;
+  overflow: hidden;
+  position: relative; }
+  .swiper-container .swiper-slide {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center; }
+  .swiper-container .swiper-button-prev, .swiper-container .swiper-button-next {
+    top: 35px; }
+  .swiper-container .swiper-button-prev::after {
+    font-size: 19px;
+    color: #C7C7C7; }
+  .swiper-container .swiper-button-next::after {
+    font-size: 19px;
+    color: #C7C7C7; }
+  .swiper-container .swiper-pagination-bullet {
+    background-color: #FC9B09; }
 
 *,
 *::after,
