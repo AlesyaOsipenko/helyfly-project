@@ -1,34 +1,34 @@
-.header .container, .main .container, .info .container, .photographer .container, .timetable .container {
+.header .container, .main .container, .info .container, .photographer .container, .timetable .container, .replies .container {
     width: 100%;
     padding: 0 15px;
 }
 
 @media screen and (min-width: 576px) {
-    .header .container, .main .container, .info .container, .photographer .container, .timetable .container {
+    .header .container, .main .container, .info .container, .photographer .container, .timetable .container, .replies .container {
         padding: 0 35px;
     }
 }
 
 @media screen and (min-width: 768px) {
-    .header .container, .main .container, .info .container, .photographer .container, .timetable .container {
+    .header .container, .main .container, .info .container, .photographer .container, .timetable .container, .replies .container {
         padding: 0 50px;
     }
 }
 
 @media screen and (min-width: 1280px) {
-    .header .container, .main .container, .info .container, .photographer .container, .timetable .container {
+    .header .container, .main .container, .info .container, .photographer .container, .timetable .container, .replies .container {
         padding: 0 70px;
     }
 }
 
 @media screen and (min-width: 1440px) {
-    .header .container, .main .container, .info .container, .photographer .container, .timetable .container {
+    .header .container, .main .container, .info .container, .photographer .container, .timetable .container, .replies .container {
         padding: 0 150px;
     }
 }
 
 @media screen and (min-width: 1920px) {
-    .header .container, .main .container, .info .container, .photographer .container, .timetable .container {
+    .header .container, .main .container, .info .container, .photographer .container, .timetable .container, .replies .container {
         padding: 0 390px;
     }
 }
@@ -1072,7 +1072,6 @@ template {
 }
 
 .photographer__pic {
-    padding-bottom: 23px;
     position: relative;
     min-width: 140px;
     width: 140px;
@@ -1514,7 +1513,7 @@ template {
     }
 }
 
-.map .map__wrapper {
+.map__wrapper {
     border: 1px solid #C7C7C7;
     padding: 52px 16px 14px 16px;
     margin: 0 auto;
@@ -1522,16 +1521,30 @@ template {
 }
 
 @media (min-width: 1280px) {
-    .map .map__wrapper {
+    .map__wrapper {
         display: none;
     }
 }
 
 @media (min-width: 576px) {
-    .map .map__wrapper {
+    .map__wrapper {
         width: 400px;
         padding: 52px 80px 14px 80px;
     }
+}
+
+.map__photo {
+    margin-right: 10px;
+    width: 67px;
+    min-width: 67px;
+    height: 67px;
+}
+
+.map__name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #37373F;
 }
 
 .slider {
@@ -1634,6 +1647,109 @@ template {
 
 .swiper-container .swiper-pagination-bullet {
     background-color: #FC9B09;
+}
+
+.organizator {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.organizator__img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.organizator__name {
+    margin-bottom: 7px;
+}
+
+.organizator__prof {
+    margin-bottom: 7px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #37373F;
+}
+
+.organizator__link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: #5286EC;
+}
+
+.replies {
+    padding-top: 40px;
+}
+
+.replies__title {
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 39px;
+    color: #37373F;
+    text-align: center;
+}
+
+.replies__img {
+    border-radius: 50%;
+    width: 84px;
+    min-height: 84px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.replies__wrapper {
+    margin-top: 40px;
+}
+
+.replies__top {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.replies__name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #37373F;
+}
+
+.replies__subtitle {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #37373F;
+}
+
+.replies__name, .replies__subtitle {
+    margin-bottom: 6px;
+}
+
+.replies__rating {
+    margin-bottom: 30px;
+}
+
+.replies__comment {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #B3B3B3;
+    position: relative;
+}
+
+.replies__comment::after {
+    background-image: url("./../images/replies/ok.png");
+    display: block;
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 11.5px;
+    color: #6AAD4A;
 }
 
 *,

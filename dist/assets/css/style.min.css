@@ -1,20 +1,20 @@
-.header .container, .main .container, .info .container, .photographer .container, .timetable .container {
+.header .container, .main .container, .info .container, .photographer .container, .timetable .container, .replies .container {
   width: 100%;
   padding: 0 15px; }
   @media screen and (min-width: 576px) {
-    .header .container, .main .container, .info .container, .photographer .container, .timetable .container {
+    .header .container, .main .container, .info .container, .photographer .container, .timetable .container, .replies .container {
       padding: 0 35px; } }
   @media screen and (min-width: 768px) {
-    .header .container, .main .container, .info .container, .photographer .container, .timetable .container {
+    .header .container, .main .container, .info .container, .photographer .container, .timetable .container, .replies .container {
       padding: 0 50px; } }
   @media screen and (min-width: 1280px) {
-    .header .container, .main .container, .info .container, .photographer .container, .timetable .container {
+    .header .container, .main .container, .info .container, .photographer .container, .timetable .container, .replies .container {
       padding: 0 70px; } }
   @media screen and (min-width: 1440px) {
-    .header .container, .main .container, .info .container, .photographer .container, .timetable .container {
+    .header .container, .main .container, .info .container, .photographer .container, .timetable .container, .replies .container {
       padding: 0 150px; } }
   @media screen and (min-width: 1920px) {
-    .header .container, .main .container, .info .container, .photographer .container, .timetable .container {
+    .header .container, .main .container, .info .container, .photographer .container, .timetable .container, .replies .container {
       padding: 0 390px; } }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -1194,6 +1194,77 @@ template {
     font-size: 14px;
     line-height: 21px;
     color: #5286EC; }
+
+.replies {
+  padding-top: 40px; }
+  .replies__title {
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 39px;
+    color: #37373F;
+    text-align: center; }
+  .replies__pic {
+    width: 84px;
+    height: 84px;
+    margin-right: 18px; }
+  .replies__img {
+    max-width: 100%;
+    height: 100%;
+    border-radius: 50%; }
+  .replies__wrapper {
+    margin-top: 40px; }
+  .replies__top {
+    display: flex;
+    width: 300px; }
+  .replies__name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #37373F;
+    max-width: 160px; }
+  .replies__subtitle {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #37373F;
+    margin-bottom: 12px; }
+  .replies__name, .replies__subtitle {
+    margin-bottom: 6px; }
+  .replies__rating {
+    margin-bottom: 30px; }
+  .replies__comment {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #B3B3B3;
+    position: relative;
+    text-align: center;
+    margin-bottom: 15px; }
+    .replies__comment::after {
+      background-image: url("./../images/replies/ok.png");
+      display: block;
+      position: absolute;
+      content: "";
+      width: 15px;
+      height: 11.5px;
+      color: #6AAD4A;
+      top: 5px;
+      left: -5px;
+      object-fit: cover;
+      background-size: cover;
+      background-repeat: no-repeat; }
+  .replies__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #37373F;
+    max-width: 290px;
+    margin-bottom: 30px; }
+  .replies__date {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #B3B3B3; }
 
 *,
 *::after,

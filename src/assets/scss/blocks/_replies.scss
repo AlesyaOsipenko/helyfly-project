@@ -1,0 +1,87 @@
+.replies {
+    padding-top: 40px;
+
+    .container {
+        @extend %container;
+    }
+
+    &__title {
+        @include text(26px, 400, 39px, $textColor);
+        text-align: center;
+    }
+
+    &__pic {
+        width: 84px;
+        height: 84px;
+        margin-right: 18px;
+    }
+
+    &__img {
+        max-width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+
+    &__wrapper {
+        margin-top: 40px;
+    }
+
+    &__top {
+        display: flex;
+        width: 300px;
+    }
+
+    &__name {
+        @include text(16px, 500, 19px, $textColor);
+        max-width: 160px;
+    }
+
+    &__subtitle {
+        @include text(14px, 400, 21px, $textColor);
+        margin-bottom: 12px;
+    }
+
+    &__name, &__subtitle {
+        margin-bottom: 6px;
+    }
+
+    &__rating {
+        margin-bottom: 30px;
+    }
+
+    &__comment {
+        @include text(14px, 400, 21px, $textColorLight); 
+        position: relative;
+        text-align: center;
+        margin-bottom: 15px;
+        &::after {
+            background-image:url('./../images/replies/ok.png');
+            @include pseudo (block, absolute, "");
+            width: 15px;
+            height: 11.5px;
+            color:#6AAD4A;
+            top:5px;
+            left: -5px;
+            object-fit: cover;
+            background-size: cover;
+            background-repeat:no-repeat;
+        }
+    }
+
+    &__text {
+        @include text(14px, 400, 21px, $textColor); 
+        max-width: 290px;
+        margin-bottom: 30px;
+    }
+
+    &__date {
+        @include text(14px, 400, 21px, $textColorLight); 
+    }
+
+
+
+
+
+
+
+}
