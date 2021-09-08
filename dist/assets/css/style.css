@@ -1,34 +1,34 @@
-.header .container, .main .container, .info .container, .photographer .container, .timetable .container, .map__slider {
+.header .container, .main .container, .info .container, .photographer .container, .timetable .container {
     width: 100%;
     padding: 0 15px;
 }
 
 @media screen and (min-width: 576px) {
-    .header .container, .main .container, .info .container, .photographer .container, .timetable .container, .map__slider {
+    .header .container, .main .container, .info .container, .photographer .container, .timetable .container {
         padding: 0 35px;
     }
 }
 
 @media screen and (min-width: 768px) {
-    .header .container, .main .container, .info .container, .photographer .container, .timetable .container, .map__slider {
+    .header .container, .main .container, .info .container, .photographer .container, .timetable .container {
         padding: 0 50px;
     }
 }
 
 @media screen and (min-width: 1280px) {
-    .header .container, .main .container, .info .container, .photographer .container, .timetable .container, .map__slider {
+    .header .container, .main .container, .info .container, .photographer .container, .timetable .container {
         padding: 0 70px;
     }
 }
 
 @media screen and (min-width: 1440px) {
-    .header .container, .main .container, .info .container, .photographer .container, .timetable .container, .map__slider {
+    .header .container, .main .container, .info .container, .photographer .container, .timetable .container {
         padding: 0 150px;
     }
 }
 
 @media screen and (min-width: 1920px) {
-    .header .container, .main .container, .info .container, .photographer .container, .timetable .container, .map__slider {
+    .header .container, .main .container, .info .container, .photographer .container, .timetable .container {
         padding: 0 390px;
     }
 }
@@ -467,7 +467,6 @@ template {
 
 .header {
     background-color: #fff;
-    border: 1px solid;
 }
 
 .header__inner {
@@ -708,6 +707,31 @@ template {
     .info__inner .info__title {
         margin: 0;
         text-align: left;
+    }
+}
+
+.info__inner .info__wrap {
+    position: relative;
+}
+
+.info__inner .info__wrap::after {
+    display: block;
+    position: absolute;
+    content: "";
+    background-image: url("../images/info/kiss__arrow.png");
+    background-repeat: no-repeat;
+    bottom: 20px;
+    right: 20px;
+    width: 12px;
+    height: 17px;
+}
+
+@media (min-width: 576px) {
+    .info__inner .info__wrap::after {
+        width: 16px;
+        height: 23px;
+        bottom: 30px;
+        right: 30px;
     }
 }
 
@@ -1490,9 +1514,24 @@ template {
     }
 }
 
-.map__slider .map__wrapper {
-    padding: 0 10px 0 10px;
+.map .map__wrapper {
     border: 1px solid #C7C7C7;
+    padding: 52px 16px 14px 16px;
+    margin: 0 auto;
+    width: 275px;
+}
+
+@media (min-width: 1280px) {
+    .map .map__wrapper {
+        display: none;
+    }
+}
+
+@media (min-width: 576px) {
+    .map .map__wrapper {
+        width: 400px;
+        padding: 52px 80px 14px 80px;
+    }
 }
 
 .slider {
@@ -1558,6 +1597,43 @@ template {
     line-height: 20px;
     color: #37373F;
     text-align: center;
+}
+
+.swiper-container {
+    max-width: 400px;
+    width: 100%;
+    min-height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.swiper-container .swiper-slide {
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    justify-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.swiper-container .swiper-button-prev, .swiper-container .swiper-button-next {
+    top: 35px;
+}
+
+.swiper-container .swiper-button-prev::after {
+    font-size: 19px;
+    color: #C7C7C7;
+}
+
+.swiper-container .swiper-button-next::after {
+    font-size: 19px;
+    color: #C7C7C7;
+}
+
+.swiper-container .swiper-pagination-bullet {
+    background-color: #FC9B09;
 }
 
 *,

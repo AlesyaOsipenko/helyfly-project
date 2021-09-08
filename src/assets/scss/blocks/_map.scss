@@ -9,7 +9,7 @@
         }
     }
 
-    .map__wrapper {
+    &__wrapper {
         border: 1px solid #C7C7C7;
         padding: 52px 16px 14px 16px;
         margin: 0 auto;
@@ -24,5 +24,16 @@
             padding: 52px 80px 14px 80px;
         }
 
+    }
+
+    &__photo {
+        margin-right: 10px;
+        width: 67px;
+        min-width: 67px;
+        height: 67px;
+    }
+
+    &__name {
+        @include text (16px, 500, 22px, $textColor);
     }
 }
