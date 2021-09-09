@@ -454,12 +454,17 @@ template {
 }
 
 .text {
-    font-size: 18px;
     font-weight: 400;
+    font-size: 18px;
     line-height: 26px;
+    color: #37373F;
 }
 
 .block__text {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    color: #37373F;
     font-size: 18px;
     font-weight: 500;
     line-height: 26px;
@@ -1176,15 +1181,6 @@ template {
     }
 }
 
-.photographer__text-start {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    color: #37373F;
-    margin-bottom: 25px;
-    text-align: left;
-}
-
 .photographer__text {
     font-weight: 400;
     font-size: 16px;
@@ -1221,14 +1217,6 @@ template {
     height: 6px;
     bottom: 5px;
     right: -20px;
-}
-
-.photographer__text-second {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    color: #37373F;
-    margin-bottom: 22px;
 }
 
 .photographer__title-second {
@@ -1296,7 +1284,7 @@ template {
     }
 }
 
-.timetable__wrapper .timetable__text-friday {
+.timetable__wrapper .timetable__day {
     text-align: center;
     padding: 20px 0 15px;
     border-bottom: 0.5px solid #C7C7C7;
@@ -1304,12 +1292,12 @@ template {
 }
 
 @media (min-width: 576px) {
-    .timetable__wrapper .timetable__text-friday {
+    .timetable__wrapper .timetable__day {
         padding: 30px 0 20px 20px;
         text-align: left;
     }
 
-    .timetable__wrapper .timetable__text-friday::after {
+    .timetable__wrapper .timetable__day::after {
         display: block;
         position: absolute;
         content: "";
@@ -1360,7 +1348,7 @@ template {
 }
 
 @media (min-width: 576px) {
-    .timetable__wrapper .timetable__inner--second {
+    .timetable__wrapper .timetable__inner--disabled {
         border-bottom: none;
     }
 }

@@ -201,7 +201,8 @@
 
             <div class="timetable__wrapper">
 
-                <p class="timetable__day"><time class="text" datetime="2021-09-14 22:00"> Пятница, <span class="block__text">14 </span>сентября</time></p>
+                <p class="timetable__day"><time class="text" datetime="2021-09-14 22:00"> Пятница, <span
+                            class="block__text">14 </span>сентября</time></p>
 
                 <div class="timetable__inner timetable__inner">
 
@@ -318,21 +319,25 @@
     </section>
 
     <section class="replies">
-        <h2 class="replies__title">Отзывы</h2>
         <div class="container">
 
-            <div class="replies__wrapper">
+            <h2 class="replies__title">Отзывы</h2>
 
-                <div class="replies__card">
+            <div class="replies__card">
 
-                    <div class="replies__top">
-                        <div class="replies__pic">
-                            <img src="./assets/images/replies/replies-pic-1.png" alt="" class="replies__img">
+
+                <div class="replies__inner">
+                    <div class="replies__wrapper">
+                        <div class="replies__photo">
+                            <img class="replies__pic" src="./assets/images/replies/replies-pic-1.png" alt="">
                         </div>
 
-                        <div class="replies__person">
+
+                        <div class="replies__box">
+
                             <h3 class="replies__name">Валерия Антонова</h3>
                             <p class="replies__subtitle">Арт-директор</p>
+
                             <div class="replies__rating rating-group">
                                 <label aria-label="1 star" class="rating__label" for="rating-1.2"><i
                                         class="rating__icon rating__icon--star fa fa-star fa-xs"></i></label>
@@ -351,24 +356,128 @@
                                         class="rating__icon rating__icon--star fa fa-star"></i></label>
                                 <input class="rating__input" name="rating" id="rating-5.5" value="5" type="radio">
                             </div>
-
+                            
                         </div>
+                    </div>
+
+
+                    <div class="replies__comment">
+                        <span class="replies__text--grey">Супер! Я бы заказала съемку снова!</span>
+                    </div>
                 </div>
 
                 <p class="replies__text">Хотим выразить огромную благодарность вашей компании! Получили море ощущений,
                     все прошло просто замечательно. Фотки получились великолепные, отдельное спасибо фотографу!</p>
 
-                    <time class="replies__date" datetime="2019-04-27">27 Апреля, 2019г.</time>
+                <time class="replies__date" datetime="2019-04-27">27 Апреля, 2019г.</time>
+
+            </div>
+
+
+            <div class="replies__card">
+
+                <div class="replies__inner">
+                    <div class="replies__wrapper">
+                        <div class="replies__photo">
+                            <img class="replies__pic" src="./assets/images/replies/replies-pic-2.png" alt="">
+                        </div>
+
+
+                        <div class="replies__box">
+
+                            <h3 class="replies__name">Виталий Петров</h3>
+                            <p class="replies__subtitle">Фотограф</p>
+
+
+                            <div class="replies__rating rating-group">
+                                <label aria-label="1 star" class="rating__label" for="rating-1.3"><i
+                                        class="rating__icon rating__icon--star fa fa-star fa-xs"></i></label>
+                                <input class="rating__input" name="rating" id="rating-1.3" value="1" type="radio">
+                                <label aria-label="2 stars" class="rating__label" for="rating-2.3"><i
+                                        class="rating__icon rating__icon--star fa fa-star"></i></label>
+                                <input class="rating__input" name="rating" id="rating-2.3" value="2" type="radio">
+                                <label aria-label="3 stars" class="rating__label" for="rating-3.4"><i
+                                        class="rating__icon rating__icon--star fa fa-star"></i></label>
+                                <input class="rating__input" name="rating" id="rating-3.4" value="3" type="radio"
+                                    checked>
+                                <label aria-label="4 stars" class="rating__label" for="rating-4.5"><i
+                                        class="rating__icon rating__icon--star fa fa-star"></i></label>
+                                <input class="rating__input" name="rating" id="rating-4.5" value="4" type="radio">
+                                <label aria-label="5 stars" class="rating__label" for="rating-5.6"><i
+                                        class="rating__icon rating__icon--star fa fa-star"></i></label>
+                                <input class="rating__input" name="rating" id="rating-5.6" value="5" type="radio">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="replies__comment">
+                        <span class="replies__text--grey">Супер! Я бы заказал съемку снова!</span>
+                    </div>
+                </div>
+
+                <p class="replies__text">Восторг! :) Очень понравилось :) Захватили последний теплый, солнечный
+                    октябрьский день :) Впечатлило всё: сам вертолет, взлет, полёт, приземление. Организация полёта
+                    отличная. Спасибо!</p>
+
+                <time class="replies__date" datetime="2019-04-19">19 Апреля, 2019г.</time>
+
+            </div>
+
+
+            <div class="replies__card replies__card-three">
+
+                <div class="replies__inner">
+
+                    <div class="replies__wrapper">
+
+                        <div class="replies__photo">
+                            <img class="replies__pic" src="./assets/images/replies/replies-pic-3.png" alt="">
+                        </div>
+
+                        <div class="replies__box replies__box-three">
+
+                            <h3 class="replies__name">Джим Керри</h3>
+
+                            <div class="replies__rating rating-group">
+                                <label aria-label="1 star" class="rating__label" for="rating-1.4"><i
+                                        class="rating__icon rating__icon--star fa fa-star fa-xs"></i></label>
+                                <input class="rating__input" name="rating" id="rating-1.4" value="1" type="radio">
+                                <label aria-label="2 stars" class="rating__label" for="rating-2.5"><i
+                                        class="rating__icon rating__icon--star fa fa-star"></i></label>
+                                <input class="rating__input" name="rating" id="rating-2.5" value="2" type="radio">
+                                <label aria-label="3 stars" class="rating__label" for="rating-3.5"><i
+                                        class="rating__icon rating__icon--star fa fa-star"></i></label>
+                                <input class="rating__input" name="rating" id="rating-3.5" value="3" type="radio"
+                                    checked>
+                                <label aria-label="4 stars" class="rating__label" for="rating-4.7"><i
+                                        class="rating__icon rating__icon--star fa fa-star"></i></label>
+                                <input class="rating__input" name="rating" id="rating-4.7" value="4" type="radio">
+                                <label aria-label="5 stars" class="rating__label" for="rating-5.7"><i
+                                        class="rating__icon rating__icon--star fa fa-star"></i></label>
+                                <input class="rating__input" name="rating" id="rating-5.7" value="5" type="radio">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="replies__comment">
+                        <span class="replies__text--grey">Супер! Я бы заказал съемку снова!</span>
+                    </div>
+                </div>
+                <p class="replies__text replies__text-three">Круто-круто-круто!!! Отмечали мой ДэРэ. Отлично провели
+                    время!!! Кстати закуски были вкусными и сытными))Мы с собой ничего не брали. Сами много
+                    фоткались,поэтому воспоминания обалденные!!!)) А еще нам всем напечатали по сертификату
+                    воздухоплавателя,
+                    правда некоторые ленятся за ним съездить))) Но все равно приятно. Короче, Презентстар – проверено.
+                    Оценка: пять!</p>
+
+                <time class="replies__date" datetime="2019-04-11">11 Апреля, 2019г.</time>
+
             </div>
 
         </div>
-        </div>
-
-
 
     </section>
-
-
 
 
 
