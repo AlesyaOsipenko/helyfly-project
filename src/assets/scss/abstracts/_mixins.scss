@@ -5,6 +5,14 @@
     color: $color;
 }
 
+@mixin block-text ($fontSize, $fontWeight, $lineHeight, $color) {
+    font-weight: $fontWeight;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    color: $color;
+}
+
+
 @mixin media($width, $type:min) {
     @if map_has_key($breakpoints, $width) {
         $width: map_get($breakpoints, $width);

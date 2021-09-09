@@ -33,7 +33,7 @@
             max-width: 770px;
         }
 
-        #{$timetable}__text-friday {
+        #{$timetable}__day {
             text-align: center;
             padding: 20px 0 15px;
             border-bottom: 0.5px solid #C7C7C7;
@@ -86,7 +86,7 @@
             margin-top: 20px;
         }
 
-        #{$timetable}__inner--second {
+        #{$timetable}__inner--disabled {
             @include media (xs) {
                 border-bottom: none;
             }

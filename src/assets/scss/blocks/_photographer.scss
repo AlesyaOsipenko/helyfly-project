@@ -99,13 +99,6 @@
         }
     }
 
-    &__text-start {
-        @include text (16px, 400, 24px, $textColor);
-        margin-bottom: 25px;
-        text-align: left;
-
-    }
-
     &__text {
         @include text (16px, 400, 24px, $textColor);
         margin-bottom: 22px;
@@ -134,11 +127,6 @@
             bottom: 5px;
             right: -20px;
         }
-    }
-
-    &__text-second {
-        @include text (16px, 400, 24px, $textColor);
-        margin-bottom: 22px;
     }
 
     &__title-second {
