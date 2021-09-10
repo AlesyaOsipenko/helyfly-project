@@ -84,36 +84,33 @@
     &__link {
         @include text (17px, 500, 25px, $linkColor);
         display: none;
+        position: relative;
 
         @include media (sm) {
             display: block;
             padding-top: 42px;
         }
-    }
 
-    &__link {
-        position: relative;
-    }
+        &::before {
+            content: "";
+            position: absolute;
+            display: block;
+            background-image: url('../images/photocards/arrow.svg');
+            width: 11px;
+            height: 6px;
+            bottom: 9px;
+            left: -18px;
+        }
 
-    &__link::before {
-        content: "";
-        position: absolute;
-        display: block;
-        background-image: url(../images/photocards/arrow.svg);
-        width: 11px;
-        height: 6px;
-        bottom: 9px;
-        left: -18px;
-    }
-
-    &__link::after {
-        content: "";
-        position: absolute;
-        display: block;
-        background-image: url(../images/photocards/arrow.svg);
-        width: 11px;
-        height: 6px;
-        bottom: 9px;
-        right: -18px;
+        &::after {
+            content: "";
+            position: absolute;
+            display: block;
+            background-image: url('../images/photocards/arrow-2.png');
+            width: 11px;
+            height: 6px;
+            bottom: 9px;
+            right: -18px;
+        }
     }
 }
