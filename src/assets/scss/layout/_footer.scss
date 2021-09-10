@@ -1,0 +1,129 @@
+.footer {
+    padding-top: 44px;
+    border-top: 0.5px solid #C7C7C7;
+    @include media (xs) {
+        border-top:none;
+        padding-top: 20px;
+    }
+    .container {
+        @extend %container;
+    }
+    &__top {
+        padding-bottom: 25px;
+        @include media (xs) {
+            padding-bottom: 50px;
+        }
+        @include media (lg) {
+            padding: 0 70px 27px 65px;
+        }
+    }
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__logo {
+        @include media (xs) {
+            min-width: 130px;
+        }
+    }
+    &__socials {
+        min-width: 140px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include media (xs) {
+            min-width: 130px;
+        }
+        @include media (md) {
+            min-width: 210px;
+        }
+    }
+    &__bottom {
+        padding-top: 25px;
+        padding-bottom: 20px;
+        @include media (xs) {
+            background-color: #FAF9F8;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+    }
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        @include media (xs) {
+            grid-template-columns: 100px auto;
+            grid-template-rows: 1fr;
+        }
+    }
+    &__shell {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        grid-area: 1/1/2/3;
+        margin-bottom: 25px;
+        @include media (xs) {
+            margin-bottom: 0px;
+        }
+    }
+    &__pay {
+        display: flex;
+        @include media (lg) {
+            margin-left: 65px;
+        }
+    }
+    &__lang {
+        @include text(15px, 400, 18px, $textColor);
+        position: relative;
+        margin-right: 20px;
+        @include media (xs) {
+            margin-right: 13px;
+        }
+        @include media (md) {
+            display: none;
+        }
+        &--invisible {
+            display: none;
+            @include media (md) {
+                display: block;
+            }
+        }
+    }
+    &__lang::after {
+        @include pseudo ('block, absolute, "');
+        background-image: url('../images/photocards/arrow.svg');
+        width: 11px;
+        height: 6px;
+        top: 7px;
+        right: -15px;
+    }
+    &__pay {
+        align-items: center;
+        min-width: 100px;
+        gap: 17px;
+    }
+
+    &__icon-card{
+        margin-right: 17px;
+        @include media (xs) {
+            margin-right: 27px;
+            transform: scale(1.2);
+        }
+    }
+
+    &__info{
+        grid-area: 2/1/3/3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include text(14px, 400, 17px, $textColor);
+        margin: 0 auto;
+        @include media (xs) {
+            grid-area: 1/1/2/3;
+        }
+    }
+    &__number {
+        margin-bottom: 10px;
+    }
+}
