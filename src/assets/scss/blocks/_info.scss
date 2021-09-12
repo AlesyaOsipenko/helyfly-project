@@ -26,7 +26,7 @@
             @include media(sm) {
                 max-width: 285px;
                 margin-bottom: 40px;
-                @include text (40px, 500, 48px, $textColor);
+                @include text (40px, 500, 49px, $textColor);
             }
 
             @include media(md) {
@@ -35,32 +35,9 @@
             }
         }
 
-        #{$info}__wrap {
-            position: relative;
-            &::after {
-                @include pseudo (block, absolute, '');
-                background-image:url('../images/info/kiss__arrow.png');
-                background-repeat:no-repeat;
-                bottom: 20px;
-                right: 20px;
-                width: 12px;
-                height: 17px;
-                @include media(xs) {
-                    width: 16px;
-                    height: 23px;
-                    bottom: 30px;
-                    right: 30px;
-                }
-            }
-        } 
-
         #{$info}__img {
             border-radius: 4px;
             width: 100%;
-
-            @include media(md) {
-                padding-top: 70px;
-            }
         }
 
         #{$info}__wrapper {

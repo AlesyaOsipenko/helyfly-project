@@ -77,13 +77,10 @@
         @include text(15px, 400, 18px, $textColor);
         position: relative;
         margin-right: 20px;
-        @include media (xs) {
-            margin-right: 13px;
-        }
         @include media (md) {
             display: none;
         }
-        &--invisible {
+        &--hidden {
             display: none;
             @include media (md) {
                 display: block;
