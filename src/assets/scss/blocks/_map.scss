@@ -1,5 +1,15 @@
 .map {
     position: relative;
+    .container {
+        @extend %container;
+        &__card {
+            position: absolute;
+            transform: translateX(-50%);
+            top: 0;
+            left: 50%;
+            bottom: 0;
+        }
+    }
 
     &__screen {
         margin-bottom: 52px;
@@ -23,7 +33,6 @@
             width: 400px;
             padding: 52px 80px 14px 80px;
         }
-
     }
 
     &__photo {
@@ -35,6 +44,21 @@
 
     &__name {
         @include text (16px, 500, 22px, $textColor);
+    }
+
+    &__card {
+        display: none;
+        @include media (md) {
+            position: absolute;
+            top: 20px;
+            width: 420px;
+            height: 470px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            background-color: white;
+            padding: 50px 30px;
+    }
     }
 
 }

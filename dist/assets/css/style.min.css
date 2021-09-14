@@ -1,20 +1,20 @@
-.header .container, .main .container, .info .container, .photographer .container, .timetable .container, .replies .container, .footer .container {
+.header .container, .main .container, .info .container, .photographer .container, .timetable .container, .map .container, .replies .container, .footer .container {
   width: 100%;
   padding: 0 15px; }
   @media screen and (min-width: 576px) {
-    .header .container, .main .container, .info .container, .photographer .container, .timetable .container, .replies .container, .footer .container {
+    .header .container, .main .container, .info .container, .photographer .container, .timetable .container, .map .container, .replies .container, .footer .container {
       padding: 0 35px; } }
   @media screen and (min-width: 768px) {
-    .header .container, .main .container, .info .container, .photographer .container, .timetable .container, .replies .container, .footer .container {
+    .header .container, .main .container, .info .container, .photographer .container, .timetable .container, .map .container, .replies .container, .footer .container {
       padding: 0 50px; } }
   @media screen and (min-width: 1280px) {
-    .header .container, .main .container, .info .container, .photographer .container, .timetable .container, .replies .container, .footer .container {
+    .header .container, .main .container, .info .container, .photographer .container, .timetable .container, .map .container, .replies .container, .footer .container {
       padding: 0 70px; } }
   @media screen and (min-width: 1440px) {
-    .header .container, .main .container, .info .container, .photographer .container, .timetable .container, .replies .container, .footer .container {
+    .header .container, .main .container, .info .container, .photographer .container, .timetable .container, .map .container, .replies .container, .footer .container {
       padding: 0 150px; } }
   @media screen and (min-width: 1920px) {
-    .header .container, .main .container, .info .container, .photographer .container, .timetable .container, .replies .container, .footer .container {
+    .header .container, .main .container, .info .container, .photographer .container, .timetable .container, .map .container, .replies .container, .footer .container {
       padding: 0 390px; } }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -458,6 +458,7 @@ template {
   background-image: url(./../images/main-bg.jpg);
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   color: #fff; }
   .main__inner {
     display: flex;
@@ -529,6 +530,12 @@ template {
 
 .info {
   padding-top: 40px; }
+  @media (min-width: 768px) {
+    .info {
+      padding-top: 50px; } }
+  @media (min-width: 1280px) {
+    .info {
+      padding-top: 70px; } }
   .info__inner {
     display: grid;
     grid-template-columns: 1fr; }
@@ -536,7 +543,7 @@ template {
       .info__inner {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 110px;
-        column-gap: 37px; } }
+        column-gap: 40px; } }
     .info__inner .info__title {
       font-weight: 400;
       font-size: 28px;
@@ -1051,6 +1058,12 @@ template {
 
 .map {
   position: relative; }
+  .map .container__card {
+    position: absolute;
+    transform: translateX(-50%);
+    top: 0;
+    left: 50%;
+    bottom: 0; }
   .map__screen {
     margin-bottom: 52px; }
     @media (min-width: 768px) {
@@ -1078,6 +1091,19 @@ template {
     font-size: 16px;
     line-height: 22px;
     color: #37373F; }
+  .map__card {
+    display: none; }
+    @media (min-width: 1280px) {
+      .map__card {
+        position: absolute;
+        top: 20px;
+        width: 420px;
+        height: 470px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color: white;
+        padding: 50px 30px; } }
 
 .slider {
   display: flex;
@@ -1087,22 +1113,7 @@ template {
     display: flex;
     margin-bottom: 30px; }
   .slider__circle {
-    width: 66px;
-    height: 66px;
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 44px;
-    color: #fff;
-    margin-bottom: 20px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #FC9B09;
-    border-radius: 50%; }
+    margin-bottom: 20px; }
   .slider__text {
     display: flex;
     flex-direction: column;
@@ -1152,9 +1163,9 @@ template {
     height: 100%;
     border-radius: 50%; }
   .organizator__name {
-    margin-bottom: 7px; }
+    margin-bottom: 5px; }
   .organizator__prof {
-    margin-bottom: 7px;
+    margin-bottom: 5px;
     font-weight: 400;
     font-size: 14px;
     line-height: 21px;
@@ -1166,8 +1177,11 @@ template {
     color: #5286EC; }
 
 .replies {
-  padding-top: 30px;
-  padding-bottom: 44px; }
+  padding-bottom: 44px;
+  padding-top: 40px; }
+  @media (min-width: 1280px) {
+    .replies {
+      padding-top: 50px; } }
   .replies__title {
     font-weight: 400;
     font-size: 26px;
@@ -1457,6 +1471,58 @@ template {
         grid-area: 1/1/2/3; } }
   .footer__number {
     margin-bottom: 10px; }
+
+.circle {
+  width: 66px;
+  height: 66px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 44px;
+  color: #fff;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FC9B09;
+  border-radius: 50%; }
+
+.organization__box {
+  display: flex;
+  margin-bottom: 34px; }
+
+.organization__circle {
+  width: 60px;
+  height: 60px;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 51px;
+  color: #fff;
+  margin-right: 18px; }
+
+.organization__text {
+  justify-content: flex-start;
+  margin-bottom: 0px; }
+
+.organization__text-one {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: #37373F;
+  margin-bottom: 8px; }
+
+.organization__text-two {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  color: #37373F; }
+
+.container {
+  max-width: 1740px;
+  margin: 0 auto;
+  padding: 0 10px; }
 
 *,
 *::after,

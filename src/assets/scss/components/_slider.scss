@@ -10,17 +10,18 @@
     }
 
     &__circle {
-        width: 66px;
-        height: 66px;
-        @include text(30px, 700, 44px, $primaryColor);
+        // width: 66px;
+        // height: 66px;
+        // @include text(30px, 700, 44px, $primaryColor);
+        // margin-bottom: 20px;
+        // -webkit-border-radius: 50%;
+        // -moz-border-radius: 50%;
+        // -ms-border-radius: 50%;
+        // -o-border-radius: 50%;
+        // @include flex (center, center);
+        // background-color: $accentColor;
+        // border-radius: 50%;
         margin-bottom: 20px;
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        -ms-border-radius: 50%;
-        -o-border-radius: 50%;
-        @include flex (center, center);
-        background-color: $accentColor;
-        border-radius: 50%;
     }
 
     &__text {

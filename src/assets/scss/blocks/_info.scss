@@ -1,5 +1,11 @@
 .info {
     padding-top: 40px;
+    @include media(sm) {
+        padding-top: 50px;
+    }
+    @include media(md) {
+        padding-top: 70px;
+    }
     $info: &;
 
     .container {
@@ -13,7 +19,7 @@
         @include media(md) {
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: 110px;
-            column-gap: 37px;
+            column-gap: 40px;
         }
 
 

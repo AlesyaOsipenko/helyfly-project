@@ -6,10 +6,10 @@
         border-radius: 50%;
     }
     &__name {
-        margin-bottom: 7px;
+        margin-bottom: 5px;
     }
     &__prof {
-        margin-bottom: 7px;
+        margin-bottom: 5px;
         @include text (14px, 400, 21px, $textColor);
     }
     &__link {

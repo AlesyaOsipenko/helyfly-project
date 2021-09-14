@@ -703,7 +703,7 @@ template {
         margin-bottom: 40px;
         font-weight: 500;
         font-size: 40px;
-        line-height: 48px;
+        line-height: 49px;
         color: #37373F;
     }
 }
@@ -715,40 +715,9 @@ template {
     }
 }
 
-.info__inner .info__wrap {
-    position: relative;
-}
-
-.info__inner .info__wrap::after {
-    display: block;
-    position: absolute;
-    content: "";
-    background-image: url("../images/info/kiss__arrow.png");
-    background-repeat: no-repeat;
-    bottom: 20px;
-    right: 20px;
-    width: 12px;
-    height: 17px;
-}
-
-@media (min-width: 576px) {
-    .info__inner .info__wrap::after {
-        width: 16px;
-        height: 23px;
-        bottom: 30px;
-        right: 30px;
-    }
-}
-
 .info__inner .info__img {
     border-radius: 4px;
     width: 100%;
-}
-
-@media (min-width: 1280px) {
-    .info__inner .info__img {
-        padding-top: 70px;
-    }
 }
 
 .info__inner .info__wrapper .info__text {

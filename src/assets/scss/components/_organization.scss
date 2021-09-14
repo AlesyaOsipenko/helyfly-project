@@ -1,0 +1,23 @@
+.organization {
+    &__box {
+        display: flex;
+        margin-bottom: 34px;
+    }
+    &__circle {
+        width: 60px;
+        height: 60px;
+        @include text(35px, 700, 51px, $primaryColor);
+        margin-right: 18px;
+    }
+    &__text {
+        justify-content: flex-start;
+        margin-bottom: 0px;
+    }
+    &__text-one {
+        @include text(18px, 500, 27px, $textColor);
+        margin-bottom: 8px;
+    }
+    &__text-two {
+        @include text(18px, 400, 26px, $textColor);
+    }
+}
