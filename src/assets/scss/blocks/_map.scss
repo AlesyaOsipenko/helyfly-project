@@ -7,13 +7,10 @@
             transform: translateX(-50%);
             top: 0;
             left: 50%;
-            bottom: 0;
         }
     }
 
     &__screen {
-        margin-bottom: 52px;
-
         @include media (sm) {
             height: 510px;
         }
@@ -24,6 +21,7 @@
         padding: 52px 16px 14px 16px;
         margin: 0 auto;
         width: 275px;
+        margin-top: 50px;
 
         @include media (md) {
             display: none;

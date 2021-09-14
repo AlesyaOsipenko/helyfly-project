@@ -55,7 +55,7 @@
 
     &__name {
         @include text (18px, 500, 22px, $textColor);
-        margin-top: 23px;
+        margin-top: 18px;
         padding-bottom: 2px;
     }
 
@@ -99,10 +99,21 @@
         }
     }
 
+    .photographer__title-second{
+        margin-top: 20px;
+    }
+
     &__text {
         @include text (16px, 400, 24px, $textColor);
-        margin-bottom: 22px;
         text-align: left;
+    }
+
+    &__text-first {
+        margin-bottom: 25px;
+    }
+
+    &__text-second {
+        padding-bottom: 20px;
     }
 
     &__content-link {

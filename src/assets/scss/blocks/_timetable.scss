@@ -1,5 +1,5 @@
 .timetable {
-    padding: 20px 0 45px;
+    padding: 65px 0 45px;
     $timetable: &;
 
     .container {
@@ -8,7 +8,7 @@
 
     &__title {
         @include text (26px, 400, 32px, $textColor);
-        margin: 0px auto 40px;
+        margin: 0px auto 35px;
         max-width: 278px;
         text-align: center;
 
@@ -57,7 +57,7 @@
 
 
         #{$timetable}__inner {
-            padding: 15px 20px 30px;
+            padding: 30px 20px 30px;
             border-bottom: 0.5px solid #C7C7C7;
 
             @include media (xs) {
@@ -83,7 +83,7 @@
             border-radius: 3px;
             width: 130px;
             height: 50px;
-            margin-top: 20px;
+            margin-top: 10px;
         }
 
         #{$timetable}__inner--disabled {

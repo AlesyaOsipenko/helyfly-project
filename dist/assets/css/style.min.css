@@ -748,7 +748,7 @@ template {
     @media (min-width: 768px) {
       .photocards__link {
         display: block;
-        padding-top: 42px; } }
+        padding-top: 15px; } }
     .photocards__link::before {
       content: "";
       position: absolute;
@@ -816,7 +816,7 @@ template {
     font-size: 18px;
     line-height: 22px;
     color: #37373F;
-    margin-top: 23px;
+    margin-top: 18px;
     padding-bottom: 2px; }
   .photographer__prof {
     font-weight: 400;
@@ -856,13 +856,18 @@ template {
     @media (min-width: 1280px) {
       .photographer__title {
         font-size: 18px; } }
+  .photographer .photographer__title-second {
+    margin-top: 20px; }
   .photographer__text {
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
     color: #37373F;
-    margin-bottom: 22px;
     text-align: left; }
+  .photographer__text-first {
+    margin-bottom: 25px; }
+  .photographer__text-second {
+    padding-bottom: 20px; }
   .photographer__content-link {
     font-weight: 500;
     font-size: 16px;
@@ -897,13 +902,13 @@ template {
     color: #37373F; }
 
 .timetable {
-  padding: 20px 0 45px; }
+  padding: 65px 0 45px; }
   .timetable__title {
     font-weight: 400;
     font-size: 26px;
     line-height: 32px;
     color: #37373F;
-    margin: 0px auto 40px;
+    margin: 0px auto 35px;
     max-width: 278px;
     text-align: center; }
     @media (min-width: 576px) {
@@ -948,7 +953,7 @@ template {
             top: 22px;
             left: 235px; } }
     .timetable__wrapper .timetable__inner {
-      padding: 15px 20px 30px;
+      padding: 30px 20px 30px;
       border-bottom: 0.5px solid #C7C7C7; }
       @media (min-width: 576px) {
         .timetable__wrapper .timetable__inner {
@@ -970,7 +975,7 @@ template {
       border-radius: 3px;
       width: 130px;
       height: 50px;
-      margin-top: 20px; }
+      margin-top: 10px; }
     @media (min-width: 576px) {
       .timetable__wrapper .timetable__inner--disabled {
         border-bottom: none; } }
@@ -1062,18 +1067,16 @@ template {
     position: absolute;
     transform: translateX(-50%);
     top: 0;
-    left: 50%;
-    bottom: 0; }
-  .map__screen {
-    margin-bottom: 52px; }
-    @media (min-width: 768px) {
-      .map__screen {
-        height: 510px; } }
+    left: 50%; }
+  @media (min-width: 768px) {
+    .map__screen {
+      height: 510px; } }
   .map__wrapper {
     border: 1px solid #C7C7C7;
     padding: 52px 16px 14px 16px;
     margin: 0 auto;
-    width: 275px; }
+    width: 275px;
+    margin-top: 50px; }
     @media (min-width: 1280px) {
       .map__wrapper {
         display: none; } }
@@ -1165,7 +1168,6 @@ template {
   .organizator__name {
     margin-bottom: 5px; }
   .organizator__prof {
-    margin-bottom: 5px;
     font-weight: 400;
     font-size: 14px;
     line-height: 21px;
@@ -1181,7 +1183,7 @@ template {
   padding-top: 40px; }
   @media (min-width: 1280px) {
     .replies {
-      padding-top: 50px; } }
+      padding-top: 130px; } }
   .replies__title {
     font-weight: 400;
     font-size: 26px;
