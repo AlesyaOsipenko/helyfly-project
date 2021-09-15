@@ -22,6 +22,21 @@
             margin-bottom: 30px;
             text-align: left;
         }
+
+        @include media(md) {
+            @include text(28px, 500, 40px, $textColor);
+            margin-left: 0;
+            margin-bottom: 30px;
+            text-align: left;
+            max-width: 337px;
+        }
+
+        @include media(lg) {
+            @include text(20px, 500, 29px, $textColor);
+            margin-left: 0;
+            margin-bottom: 30px;
+            text-align: left;
+        }
     }
 
     &__wrapper {

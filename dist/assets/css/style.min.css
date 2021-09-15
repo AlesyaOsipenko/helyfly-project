@@ -73,18 +73,7 @@ a {
   color: inherit; }
 
 a:hover {
-  text-decoration: none;
-  color: #965807;
-  transition: .5s;
-  transform: scale(1) translateY(-5px);
-  -webkit-transition: .5s;
-  -moz-transition: .5s;
-  -ms-transition: .5s;
-  -o-transition: .5s;
-  -webkit-transform: scale(1) translateY(-5px);
-  -moz-transform: scale(1) translateY(-5px);
-  -ms-transform: scale(1) translateY(-5px);
-  -o-transform: scale(1) translateY(-5px); }
+  text-decoration: none; }
 
 /* Sections
    ========================================================================== */
@@ -877,6 +866,9 @@ template {
     @media (min-width: 576px) {
       .photographer__content-link {
         margin-bottom: 70px; } }
+    @media (min-width: 1280px) {
+      .photographer__content-link {
+        margin-top: 100px; } }
     .photographer__content-link__link {
       padding-bottom: 70px; }
     .photographer__content-link:after {
@@ -918,6 +910,25 @@ template {
         line-height: 38px;
         color: #37373F; } }
     @media (min-width: 768px) {
+      .timetable__title {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 29px;
+        color: #37373F;
+        margin-left: 0;
+        margin-bottom: 30px;
+        text-align: left; } }
+    @media (min-width: 1280px) {
+      .timetable__title {
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 40px;
+        color: #37373F;
+        margin-left: 0;
+        margin-bottom: 30px;
+        text-align: left;
+        max-width: 337px; } }
+    @media (min-width: 1440px) {
       .timetable__title {
         font-weight: 500;
         font-size: 20px;
@@ -1537,5 +1548,8 @@ html,
 body {
   font-family: 'Montserrat', sans-serif;
   min-width: 320px; }
+
+a:hover {
+  color: #FC9B09; }
 
 /*# sourceMappingURL=style.min.css.map */
