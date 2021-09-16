@@ -4,6 +4,13 @@
     background-position: center;
     background-repeat: no-repeat;
     color: $primaryColor;
+    @media screen and (min-width: 700px) {
+        background-size: 160%;
+    }
+    @media screen and (min-width: 1920px) {
+        background-size: cover;
+    }
+
     .container {
         @extend %container;
     }
