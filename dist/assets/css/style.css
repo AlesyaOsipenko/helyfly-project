@@ -98,17 +98,6 @@ a {
 
 a:hover {
     text-decoration: none;
-    color: #965807;
-    transition: .5s;
-    transform: scale(1) translateY(-5px);
-    -webkit-transition: .5s;
-    -moz-transition: .5s;
-    -ms-transition: .5s;
-    -o-transition: .5s;
-    -webkit-transform: scale(1) translateY(-5px);
-    -moz-transform: scale(1) translateY(-5px);
-    -ms-transform: scale(1) translateY(-5px);
-    -o-transform: scale(1) translateY(-5px);
 }
 
 /* Sections
@@ -1194,6 +1183,12 @@ template {
     }
 }
 
+@media (min-width: 1280px) {
+    .photographer__content-link {
+        margin-top: 100px;
+    }
+}
+
 .photographer__content-link__link {
     padding-bottom: 70px;
 }
@@ -2249,4 +2244,8 @@ html,
 body {
     font-family: 'Montserrat', sans-serif;
     min-width: 320px;
+}
+
+a:hover {
+    color: #FC9B09;
 }
